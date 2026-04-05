@@ -1,0 +1,74 @@
+body{
+  margin:0;
+  padding:0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* CARD */
+.container{
+  background:#fff;
+  padding:30px;
+  width:320px;
+  border-radius:10px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  text-align:center;
+}
+
+/* TITLE */
+.container h2{
+  margin-bottom:20px;
+  color:#333;
+}
+
+/* INPUTS */
+.container input{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  border:1px solid #ccc;
+  border-radius:5px;
+  outline:none;
+  transition:0.3s;
+}
+
+.container input:focus{
+  border-color:#667eea;
+  box-shadow:0 0 5px rgba(102,126,234,0.5);
+}
+
+/* BUTTON */
+.container button{
+  width:100%;
+  padding:10px;
+  background:#667eea;
+  color:#fff;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  font-size:16px;
+  transition:0.3s;
+}
+
+.container button:hover{
+  background:#5a67d8;
+}
+
+/* LINKS */
+.container p{
+  margin-top:15px;
+}
+
+.container a{
+  color:#667eea;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.container a:hover{
+  text-decoration:underline;
+}

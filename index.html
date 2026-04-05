@@ -1,0 +1,101 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Expense Tracker</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <script>
+if(!localStorage.getItem("user")){
+  window.location.href="login.html";
+}
+</script>
+   
+<div class="menu-icon" onclick="openSidebar()">☰</div>
+
+<div id="sidebar" class="sidebar">
+
+<span class="close-btn" onclick="closeSidebar()">✖</span>
+
+<h2>Expense Menu</h2>
+
+<button onclick="openMonthly()">📊 Monthly Expense</button>
+<button onclick="openYearly()">📈 Yearly Expense</button>
+
+
+
+</div>
+
+<canvas id="dailyChart" width="400" height="200"></canvas>   
+
+<div class="container">
+
+<h1>Expense Tracker System</h1>
+
+<div class="form-group">
+<input type="text" id="title" placeholder="Title">
+<input type="number" id="amount" placeholder="Amount">
+<input type="text" id="category" placeholder="Category">
+<input type="date" id="date">
+<button onclick="addExpense()">Add Expense</button>
+</div>
+
+<div class="dashboard">
+
+  <div class="card">
+    <h3>Total Expense</h3>
+    <p id="totalExpense">₹0</p>
+  </div>
+
+  <div class="card">
+    <h3>Today's Expense</h3>
+    <p id="todayExpense">₹0</p>
+  </div>
+
+  <div class="card">
+    <h3>This Month's Expense</h3>
+    <p id="monthExpense">₹0</p>
+  </div>
+
+  <div class="card">
+    <h3>Top Category</h3>
+    <p id="topCategory">-</p>
+  </div>
+
+</div>
+
+<h2>Expense List</h2>
+
+<table border="1">
+<thead>
+<tr>
+<th>Title</th>
+<th>Amount</th>
+<th>Category</th>
+<th>Date</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="expenseList"></tbody>
+
+</table>
+
+</div>
+
+<button class="bt" onclick="logout()">Logout</button>
+
+<script>
+function logout(){
+  window.location.href = "login.html";
+}
+</script>
+
+
+<script src="script.js"></script>
+</body>
+</html>
